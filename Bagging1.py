@@ -9,7 +9,10 @@ Created on Sat Dec 23 07:42:33 2017
 from operator import itemgetter
 import os
 os.chdir('D:/学生成绩预测李军利')
-
+'''
+os.chdir函数的作用：
+将目录更改为路径，路径：通过路径来加载文件
+'''
 WRITE = 1
 Weights = [0.9, 0.1]
                        
@@ -17,7 +20,9 @@ file_score1 = open("Lasso Rank/result/LassoRank(0018).txt")
 file_score2 = open("Basic Rule/result/35 and 65 of rank.txt")
 
 file_score_write = open("bagging_(Lasso Rank)"+str(Weights[0])+"_Basic Rule"+str(Weights[1])+".txt", "w")
-
+'''
+open函数的作用：
+'''
 def Read_Score(file_score):
     first_line = 0
     score = {}
@@ -29,7 +34,9 @@ def Read_Score(file_score):
         score[line_cur[0]] = float(line_cur[1])
     file_score.close()
     return(score)
-
+'''
+file_score的类型：txt
+'''
 
 def Merge(s1, s2, x1, x2):
     new_score = {}
