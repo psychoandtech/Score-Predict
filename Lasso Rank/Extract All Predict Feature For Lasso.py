@@ -45,7 +45,24 @@ def DateToInt(d1, d2, sem):
     if sem == 3 and (int(d1) / 100 < 9):
         D1 = datetime.datetime(2006, int(int(d1) / 100), int(d1) % 100)
     return (D2-D1).days + 1
+'''
+此函数变量：
+   
+Datetime参数：
+>>> a = datetime.date.today()
+>>> a
+datetime.date(2017, 3, 22)
+>>> a.year
+2017
+>>> a.month
+3
+>>> a.day
+22 
+各变量类型：
 
+1. Datetime函数的使用：
+
+'''
 
 def Extract_Book(file):
     class_dict = {}
